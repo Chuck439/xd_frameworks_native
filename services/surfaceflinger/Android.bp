@@ -40,12 +40,7 @@ cc_defaults {
 
 libdisplayconfig_cc_defaults {
     name: "libsurfaceflinger_defaults",
-    defaults: [
-        "surfaceflinger_defaults",
-        "libdisplayconfig_defaults",
-        "disable_postrender_cleanup_defaults",
-        "surfaceflinger_qcom_ext_defaults"
-    ],
+    defaults: ["surfaceflinger_defaults", "libdisplayconfig_defaults", "disable_postrender_cleanup_defaults"],
     cflags: [
         "-DLOG_TAG=\"SurfaceFlinger\"",
         "-DGL_GLEXT_PROTOTYPES",
@@ -112,6 +107,7 @@ libdisplayconfig_cc_defaults {
         "android.hardware.graphics.composer@2.2-command-buffer",
         "android.hardware.graphics.composer@2.3-command-buffer",
         "android.hardware.graphics.composer@2.4-command-buffer",
+        "display_intf_headers",
     ],
     export_static_lib_headers: [
         "libcompositionengine",
